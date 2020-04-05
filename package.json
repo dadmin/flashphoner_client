@@ -3,6 +3,10 @@
   "version": "0.5.28",
   "main": "./src/flashphoner-core.js",
   "description": "Flashphoner Web Call Server API",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
   "dependencies": {
     "adapterjs": "0.14.3",
     "es6-promise": "4.0.5",
