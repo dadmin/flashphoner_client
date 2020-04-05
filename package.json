@@ -1,5 +1,5 @@
 {
-  "name": "flashphoner-api",
+  "name": "@codevadmin/flashphoner-api",
   "version": "0.5.28",
   "main": "./src/flashphoner-core.js",
   "description": "Flashphoner Web Call Server API",
