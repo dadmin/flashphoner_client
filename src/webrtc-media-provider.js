@@ -395,12 +395,14 @@ var createConnection = function (options) {
                                             var vSettings = localVideo.srcObject.getVideoTracks()[0].getSettings();
                                             result.outboundStream[report.mediaType].height = vSettings.height;
                                             result.outboundStream[report.mediaType].width = vSettings.width;
+                                            result.outboundStream.timestamp = report.timestamp;
                                         }
                                     } else if (report.type == 'inbound-rtp') {
                                         fillStatObject(result.inboundStream, report);
                                         if (report.mediaType == 'video'  && remoteVideo != undefined) {
                                             result.inboundStream[report.mediaType].height = remoteVideo.videoHeight;
                                             result.inboundStream[report.mediaType].width = remoteVideo.videoWidth;
+                                            result.inboundStream.timestamp = report.timestamp;
                                         }
                                     }
                                 }
