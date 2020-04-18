@@ -7,6 +7,7 @@ var logger = require('./util').logger;
 var loggerConf = {push: false, severity: "INFO"};
 var Promise = require('promise-polyfill');
 var KalmanFilter = require('kalmanjs');
+var AdapterJS = require('adapterjs');
 var browserDetails = require('webrtc-adapter').default.browserDetails;
 var LOG_PREFIX = "core";
 var isUsingTemasysPlugin = false;
@@ -1566,7 +1567,7 @@ var createSession = function (options) {
             }
 
             var event = streamInfo.status;
-            
+
             if (event == INBOUND_VIDEO_RATE || event == OUTBOUND_VIDEO_RATE) {
                 detectConnectionQuality(event, streamInfo);
                 return;
